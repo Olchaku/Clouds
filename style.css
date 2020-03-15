@@ -1,0 +1,217 @@
+body {
+    background-color: aqua;
+    overflow: hidden;;
+}
+.main{
+    max-width: 1125px;
+    transform: translate(0,0);
+    position: relative;
+}
+.imgbigsky {
+    width: 120px;
+    z-index: 1;
+}
+.imgcloudsmall {
+    width: 70px;
+    z-index: 2;
+}
+.imgcloudmiddle {
+    width: 100px;
+    z-index: 3;
+}
+.sky {
+    position: absolute;
+    animation-name: skyline;
+    animation-duration: 12s; 
+    animation-timing-function: linear; 
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+.cloudsmall {
+    top: 150px;
+    position: absolute;
+    animation-name: skyline;
+    animation-duration: 15s; 
+    animation-timing-function: linear; 
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+.cloudmiddle {
+    position: absolute;
+    top: 220px;
+    animation-name: skyline;
+    animation-duration: 17s; 
+    animation-timing-function: linear; 
+    animation-delay: 1.5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+@keyframes skyline {
+0%{left:-50px;
+}
+100% {left:100%}
+}
+.house{
+    position: absolute;
+    background-color: white;
+    background-image: url(./img/real_estate.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    transform: translate(300px,50px);
+    z-index: 4;
+    animation-name: housewings;
+    animation-duration: 2.5s; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+
+}
+
+.leftwing {
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: -50px;
+    position: absolute;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+
+}
+.rightwing {
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 130px;
+    position: absolute;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+@keyframes housewings {
+    0%{  transform: translate(300px,50px);}
+    100% { transform: translate(300px,70px);}
+}
+.dollar{
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    transform: translate(500px,200px);
+    background-image: url(./img/money.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    animation-name: dollarwings;
+    animation-duration: 2.5s; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+.leftwingdollar {
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    left: -50px;
+    position: absolute;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+.rightwingdollar{
+    width: 50px;
+    height: 50px;
+    top: 33px;
+    left: 100px;
+    position: absolute;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+.hat {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transform: translate(320px,300px);
+    background-image: url(./img/education.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    animation-name: hatwings;
+    animation-duration: 2.5s; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+.leftwinghat {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: -50px;
+    position: absolute;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+
+}
+.rightwinghat {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    animation-name: wingsrotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
+@keyframes hatwings {
+    0% {  transform: translate(320px,300px);}
+    100% { transform: translate(320px,320px);}
+}
+@keyframes wingsrotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(15deg);}
+}
+@keyframes dollarwings {
+    0% { transform: translate(500px,200px);}
+    100% { transform: translate(500px,220px); }}
